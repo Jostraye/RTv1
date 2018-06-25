@@ -6,7 +6,7 @@
 /*   By: tmervin <tmervin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:42:39 by tmervin           #+#    #+#             */
-/*   Updated: 2018/06/21 11:14:27 by tmervin          ###   ########.fr       */
+/*   Updated: 2018/06/25 17:10:13 by jostraye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,16 @@ int		shadows(t_env *e, t_obj *tmp, t_obj *olst, t_obj *light_obj)
 	light = vec_mult(e->lm, -1.0);
 	while (olst)
 	{
-		light = vec_sub(v2, light_obj->pos);
-		p = vec_sub(olst->pos, v2);
-		s = distance_to_inter(e, olst, light, p);
-		if (olst == tmp && olst->type != 4)
-			s = e->smax;
-		if (s > 0.000001 && s < 0.99999)
-			return (0);
+		if (tmp != olst)
+		{
+			light = vec_sub(v2, light_obj->pos);
+			p = vec_sub(olst->pos, v2);
+			s = distance_to_inter(e, olst, light, p);
+			if (olst == tmp && olst->type != 4)
+				s = e->smax;
+			if (s > 0.000001 && s < 0.99999)
+				return (0);
+		}
 		olst = olst->next;
 	}
 	return (1);
