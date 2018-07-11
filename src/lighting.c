@@ -6,7 +6,7 @@
 /*   By: tmervin <tmervin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:42:39 by tmervin           #+#    #+#             */
-/*   Updated: 2018/07/11 15:30:17 by tmervin          ###   ########.fr       */
+/*   Updated: 2018/07/11 15:38:53 by tmervin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		shadows(t_env *e, t_obj *tmp, t_obj *olst, t_obj *light_obj)
 	t_vc	v2;
 
 	v2 = vec_add(vec_mult(e->ray, e->t), e->eye_lookfrom);
-	v2 = vec_add(vec_mult(e->n, 0.001), v2);
+	v2 = vec_add(vec_mult(e->n, SHADOW_BIAS), v2);
 	light = vec_mult(e->lm, -1.0);
 	while (olst)
 	{
