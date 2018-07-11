@@ -6,7 +6,7 @@
 /*   By: tmervin <tmervin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 14:51:34 by tmervin           #+#    #+#             */
-/*   Updated: 2018/06/20 17:10:55 by tmervin          ###   ########.fr       */
+/*   Updated: 2018/07/11 16:26:41 by tmervin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,5 @@ t_vc		rot_all_axis(t_vc vc, t_vc obj)
 	vc = rot_z(vc, obj.z);
 	vc = rot_y(vc, obj.y);
 	vc = rot_x(vc, obj.x);
-	return (vc);
-}
-
-t_vc		rot_all_axis_inv(t_vc vc, t_vc obj)
-{
-	rot_x(vc, -obj.x);
-	rot_y(vc, -obj.y);
-	rot_z(vc, -obj.z);
 	return (vc);
 }

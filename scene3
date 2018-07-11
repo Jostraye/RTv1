@@ -1,7 +1,7 @@
 #NAME		X		Y		Z		RX	RY	RZ	COLOR		SIZE		SPEC	DIFF	AMB
-plane		  0		  0		 -600		0 0 1	0xFF5733	200			0.1		0.9		0.8
-light		 1200	300	1700			0 0 0	0xFFFFFF
-light		 1200	600	1000		0 0 0	0xFFFFFF
-light		 800	800	400		0 0 0	0xFFFFFF
-sphere	 1000	300		200		0  0	0	0x581845	400		1		1		0.2
-eye		-2100	0		2100		0	40	0
+plane		0		0		-600	0 	0 	1	0xFF5733	200			0.1		0.9		0.8
+light		1200	300		1700	0 	0 	0	0xFFFFFF
+light		1200	600		1000	0 	0 	0	0xFFFFFF
+light		800		800		400		0 	0 	0	0xFFFFFF
+sphere	 	1000	300		200		0  	0	0	0x581845	400			1		1		0.2
+eye			-2100	0		2100	0	40	0

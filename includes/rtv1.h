@@ -6,13 +6,13 @@
 /*   By: tmervin <tmervin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/10 11:01:00 by tmervin           #+#    #+#             */
-/*   Updated: 2018/07/11 15:28:17 by tmervin          ###   ########.fr       */
+/*   Updated: 2018/07/11 16:27:36 by tmervin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RTV1_H
 # define RTV1_H
-# include <unistd.h>
+# include <stdlib.h>
 # include <math.h>
 # include "mlx.h"
 # include "libft.h"
@@ -62,12 +62,9 @@ typedef struct		s_env
 	double			b;
 	double			c;
 	double			cost;
-	t_vc			tmp;
 	t_vc			ray;
 	t_vc			eye_lookfrom;
 	t_vc			eye_rot;
-	t_vc			plan;
-	t_obj			*light;
 	t_vc			n;
 	t_vc			lm;
 	t_vc			rm;
@@ -101,12 +98,9 @@ t_vc				rot_x(t_vc vc, int t);
 t_vc				rot_y(t_vc vc, int t);
 t_vc				rot_z(t_vc vc, int t);
 t_vc				rot_all_axis(t_vc vc, t_vc obj);
-t_vc				rot_all_axis_inv(t_vc vc, t_vc obj);
 double				vec_squ_sum(t_vc v1);
 t_vc				vec_add(t_vc v1, t_vc v2);
 t_vc				vec_sub(t_vc v1, t_vc v2);
-t_vc				vec_subp(t_vc *v1, t_vc *v2);
-t_vc				vec_croise(t_vc *v1, t_vc *v2);
 double				vec_x(t_vc v1, t_vc v2);
 double				vec_mod(t_vc v);
 t_vc				vec_norm(t_vc v);
