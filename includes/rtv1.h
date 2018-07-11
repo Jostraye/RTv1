@@ -6,7 +6,7 @@
 /*   By: tmervin <tmervin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/10 11:01:00 by tmervin           #+#    #+#             */
-/*   Updated: 2018/06/25 17:13:50 by jostraye         ###   ########.fr       */
+/*   Updated: 2018/07/11 15:28:17 by tmervin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define FOV 1000
 # define TH_NB 50
 # define ALPHA_SPEC 100
+# define SHADOW_BIAS 0.001
 
 typedef struct		s_vc
 {
